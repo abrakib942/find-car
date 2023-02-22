@@ -1,8 +1,14 @@
 import React from "react";
-import Button from "@mui/material/Button";
+
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes/routes";
 
 function App() {
-  return <div>Hello world</div>;
+  return (
+    <>
+      <RouterProvider router={routes} />
+    </>
+  );
 }
 
 export default App;
