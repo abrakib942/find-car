@@ -1,14 +1,39 @@
 import { TextField } from "@mui/material";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Register from "./Register";
 import { Link } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+type FormData = {
+  email: string;
+  password: string;
+};
+
+const schema = yup.object().shape({
+  email: yup.string().required("You must enter a email"),
+  password: yup
+    .string()
+    .required("Please enter your password.")
+    .min(8, "Password is too short - should be 8 letters minimum."),
+});
+
+const defaultValues = {
+  email: "",
+  password: "",
+};
 
 const Login = () => {
-  const { handleSubmit, register, control } = useForm();
+  const { handleSubmit, formState, control } = useForm<FormData>({
+    mode: "onChange",
+    defaultValues,
+    resolver: yupResolver(schema),
+  });
+
+  const { isValid, dirtyFields, errors } = formState;
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -36,28 +61,42 @@ const Login = () => {
               className="flex flex-col justify-center w-[300px]"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div className="">
-                <TextField
-                  className="mb-5"
-                  label="Email "
-                  autoFocus
-                  type="email"
-                  variant="outlined"
-                  required
-                  fullWidth
-                />
-              </div>
+              <Controller
+                name="email"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    className="mb-5"
+                    label="Email "
+                    autoFocus
+                    type="email"
+                    variant="outlined"
+                    error={!!errors.email}
+                    helperText={errors?.email?.message}
+                    required
+                    fullWidth
+                  />
+                )}
+              />
 
-              <div className="">
-                <TextField
-                  className="mb-3"
-                  label="Password"
-                  type="password"
-                  variant="outlined"
-                  required
-                  fullWidth
-                />
-              </div>
+              <Controller
+                name="password"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    className="mb-3"
+                    label="Password"
+                    type="password"
+                    variant="outlined"
+                    error={!!errors.password}
+                    helperText={errors?.password?.message}
+                    required
+                    fullWidth
+                  />
+                )}
+              />
 
               <div className="text-[12px] bg-white text-black underline hover:text-[#424242] cursor-pointer">
                 Forgot Password?
