@@ -10,7 +10,7 @@ app.use(cors());
 
 // database connection
 
-mongoose.connect("mongodb://localhost:27017/find-car").then(() => {
+mongoose.connect(process.env.DB_CONNECT).then(() => {
   console.log(`Database connection is successful`);
 });
 
