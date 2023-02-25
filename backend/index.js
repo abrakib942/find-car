@@ -15,14 +15,15 @@ mongoose.connect(process.env.DB_CONNECT).then(() => {
 });
 
 // routes
+const userRoute = require("./routes/userRoute");
 
-// posting database
-// app.use();
-
-//
 app.get("/", (req, res) => {
   res.send("Server is On");
 });
+
+app.use("/user", userRoute);
+
+//
 
 // server
 const port = process.env.PORT || 8080;
