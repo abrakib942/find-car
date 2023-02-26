@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 exports.signup = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
@@ -13,7 +13,11 @@ exports.signup = async (req, res, next) => {
 
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    const newUser = await User.create({ email, password: hashedPassword });
+    const newUser = await User.create({
+      name,
+      email,
+      password: hashedPassword,
+    });
 
     const token = jwt.sign(
       {
@@ -23,7 +27,7 @@ exports.signup = async (req, res, next) => {
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
-    res.status(200).json({ token, userId: newUser._id });
+    res.status(200).json({ userId: newUser._id, name, email, token });
   } catch (error) {
     res.status(500).json({
       status: "Failed",
@@ -53,7 +57,7 @@ exports.login = async (req, res, next) => {
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
-    res.status(200).json({ token, userId: existingUser._id });
+    res.status(200).json({ userId: existingUser._id, email, token });
   } catch (error) {
     res.status(500).json({
       status: "Failed",

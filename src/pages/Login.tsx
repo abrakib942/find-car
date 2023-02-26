@@ -4,9 +4,12 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { toast } from "react-hot-toast";
+import { useLoginUserMutation } from "../app/auth/authApi";
+import { useEffect } from "react";
 
 type FormData = {
   email: string;
@@ -14,11 +17,9 @@ type FormData = {
 };
 
 const schema = yup.object().shape({
-  email: yup.string().required("You must enter a email"),
-  password: yup
-    .string()
-    .required("Please enter your password.")
-    .min(8, "Password is too short - should be 8 letters minimum."),
+  email: yup.string().email("invalid email").required("You must enter a email"),
+  password: yup.string().required("Please enter your password."),
+  // .min(8, "Password is too short - should be 8 letters minimum."),
 });
 
 const defaultValues = {
@@ -27,7 +28,12 @@ const defaultValues = {
 };
 
 const Login = () => {
-  const { handleSubmit, formState, control } = useForm<FormData>({
+  const [loginUser, { data: loginData, isError, isLoading, isSuccess }] =
+    useLoginUserMutation();
+
+  const navigate = useNavigate();
+
+  const { handleSubmit, formState, control, reset } = useForm<FormData>({
     mode: "onChange",
     defaultValues,
     resolver: yupResolver(schema),
@@ -35,18 +41,45 @@ const Login = () => {
 
   const { isValid, dirtyFields, errors } = formState;
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = (data: FormData) => {
+    try {
+      const payloadObj = {
+        name: data.email,
+        password: data.password,
+      };
+
+      loginUser(payloadObj);
+
+      reset(defaultValues);
+    } catch (error) {
+      toast.error("Login Failed");
+      console.log(error);
+    }
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Login Successful");
+
+      navigate("/");
+    }
+  }, [isSuccess, navigate]);
+
+  const style = {
+    "& label.Mui-focused": {
+      color: "#23292E",
+    },
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "#23292E",
+      },
+    },
+  };
+
   return (
     <div className="flex">
       <div className="flex flex-col items-center justify-center w-full">
         <Card className="flex justify-center w-[40rem] max-w-384 rounded-[7px]">
-          {/* <img
-            className="w-[160px] justify-center absolute mt-[-8rem] my-[30px]"
-            src="assets/images/logos/PaulLogoWhite.png"
-            alt="logo"
-          /> */}
           <CardContent className="flex flex-col items-center justify-center p-16 sm:p-24 md:p-32">
             <Typography
               variant="h6"
@@ -67,6 +100,7 @@ const Login = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
+                    sx={style}
                     className="mb-5"
                     label="Email "
                     autoFocus
@@ -86,6 +120,7 @@ const Login = () => {
                 render={({ field }) => (
                   <TextField
                     {...field}
+                    sx={style}
                     className="mb-3"
                     label="Password"
                     type="password"

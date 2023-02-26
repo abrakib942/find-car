@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Server is On");
 });
 
-app.use("/user", userRoute);
+app.use("/api/user", userRoute);
 
 //
 
