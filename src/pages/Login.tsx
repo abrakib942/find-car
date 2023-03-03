@@ -91,7 +91,7 @@ const Login = () => {
             <form
               name="loginForm"
               noValidate
-              className="flex flex-col justify-center w-[300px]"
+              className="flex flex-col justify-center w-[400px]"
               onSubmit={handleSubmit(onSubmit)}
             >
               <Controller
