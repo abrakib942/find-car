@@ -74,7 +74,7 @@ const Navbar = (props: Props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle}>
       <Typography variant="h6" sx={{ my: 2, textAlign: "center" }}>
-        HARRIER
+        RoadRover
       </Typography>
       <Divider />
       <List>
@@ -95,36 +95,55 @@ const Navbar = (props: Props) => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar className="bg-white shadow-none " component="nav">
-        <Toolbar>
+      <AppBar className="bg-white shadow-none" component="nav">
+        <Toolbar className="p-0 flex items-center sm:justify-between sm:mr-10 lg:mr-0">
           <IconButton
             color="default"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, ml: 1, display: { md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
-          <Box>
-            <Typography
-              className="bg-[#FBE122] text-black font-bold"
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              HARRIER
-            </Typography>
-          </Box>
-          <Box
-            className="lg:ml-24"
+
+          <Typography
+            style={{
+              borderTop: " 70px solid rgb(251,225,34)",
+              borderRight: "70px solid transparent",
+              width: "250px",
+
+              position: "relative",
+            }}
+            className=" text-black font-semibold italic xl:text-4xl lg:text-3xl font-sans p-4"
+            variant="h6"
+            component="div"
             sx={{
-              display: { xs: "none", sm: "block" },
+              flexGrow: 1,
+              display: { xs: "none", sm: "none", md: "block" },
+            }}
+          >
+            <span
+              style={{
+                position: "absolute",
+                top: "-120%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              RoadRover
+            </span>
+          </Typography>
+
+          <Box
+            className=""
+            sx={{
+              display: { xs: "none", sm: "none", md: "block" },
             }}
           >
             {navItems.map((item) => (
               <Button
-                className="text-black font-sans"
+                className="text-black font-sans lg:text-base"
                 key={item}
                 variant="text"
               >
@@ -132,7 +151,7 @@ const Navbar = (props: Props) => {
               </Button>
             ))}
           </Box>
-          <Box className="text-black flex items-center ml-12">
+          <Box className="text-black flex items-center ml-6">
             <SearchBox
               placeholder="Search"
               searchText=""
@@ -144,7 +163,7 @@ const Navbar = (props: Props) => {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <MenuIcon className="ml-5" />
+                  <MenuIcon className="ml-5 lg:mr-8" />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -183,7 +202,7 @@ const Navbar = (props: Props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
