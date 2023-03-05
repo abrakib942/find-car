@@ -13,14 +13,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import Search from "@mui/icons-material/Search";
+import { ShoppingCartOutlined, FavoriteBorder } from "@mui/icons-material";
+
 import SearchBox from "../../components/SearchBox";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import Menu from "@mui/material/Menu";
+import { Link, NavLink } from "react-router-dom";
 
 interface Props {
   /**
@@ -30,14 +29,17 @@ interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 240;
-const navItems = [
-  "HOME",
-  "VEHICLES",
-  "ACCESSORIES",
-  "PAGES",
-  "BLOG",
-  "CONTACT US",
+interface NavItem {
+  label: string;
+  link: string;
+}
+
+const navItems: NavItem[] = [
+  { label: "HOME", link: "/" },
+  { label: "VEHICLES", link: "/vehicles" },
+  { label: "ACCESSORIES", link: "/accessories" },
+  { label: "My ACCOUNT", link: "/my-account" },
+  { label: "ABOUT US", link: "/about" },
 ];
 const settings = ["Submit Cars", "My Car", "My Account"];
 
@@ -49,27 +51,7 @@ const Navbar = (props: Props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const drawerWidth = 240;
 
   const drawer = (
     <Box onClick={handleDrawerToggle}>
@@ -79,11 +61,13 @@ const Navbar = (props: Props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <Link to={item.link}>
+            <ListItem key={item.label} disablePadding>
+              <ListItemButton>
+                <ListItemText primary={item.label} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -115,18 +99,18 @@ const Navbar = (props: Props) => {
 
               position: "relative",
             }}
-            className=" text-black font-semibold italic xl:text-4xl lg:text-3xl font-sans p-4"
+            className=" text-black font-semibold italic xl:text-4xl lg:text-3xl font-sans"
             variant="h6"
             component="div"
             sx={{
-              flexGrow: 1,
+              flexGrow: 0.5,
               display: { xs: "none", sm: "none", md: "block" },
             }}
           >
             <span
               style={{
                 position: "absolute",
-                top: "-120%",
+                bottom: "-50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
               }}
@@ -142,53 +126,39 @@ const Navbar = (props: Props) => {
             }}
           >
             {navItems.map((item) => (
-              <Button
-                className="text-black font-sans lg:text-base"
-                key={item}
-                variant="text"
+              <NavLink
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        color: "#fff",
+                        borderBottom: "6px solid rgb(251,225,34) ",
+                        borderRight: "10px solid transparent",
+                        width: "5px",
+                      }
+                    : { color: "#545e6f", background: "white" }
+                }
+                to={item.link}
+                key={item.label}
               >
-                {item}
-              </Button>
+                <Button
+                  className="text-black font-sans font-bold mb-2"
+                  variant="text"
+                  color="inherit"
+                >
+                  {item.label}
+                </Button>
+              </NavLink>
             ))}
           </Box>
-          <Box className="text-black flex items-center ml-6">
+          <Box className="text-black flex items-center lg:mx-6 ml-6">
             <SearchBox
               placeholder="Search"
               searchText=""
               // searchHistory={searchHistory}
               applySearch={(value) => {}}
             />
-            <ShoppingCartOutlinedIcon className="ml-5" />
-
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <MenuIcon className="ml-5 lg:mr-8" />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+            <ShoppingCartOutlined className="ml-5" />
+            <FavoriteBorder className="ml-3 lg:mr-5" />
           </Box>
         </Toolbar>
       </AppBar>
@@ -212,7 +182,7 @@ const Navbar = (props: Props) => {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main">
         <Toolbar />
       </Box>
     </Box>
@@ -220,3 +190,57 @@ const Navbar = (props: Props) => {
 };
 
 export default Navbar;
+
+///
+
+{
+  /* <Box sx={{ flexGrow: 0 }}>
+  <Tooltip title="Open settings">
+    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+      <MenuIcon className="ml-5 lg:mr-8" />
+    </IconButton>
+  </Tooltip>
+  <Menu
+    sx={{ mt: "45px" }}
+    id="menu-appbar"
+    anchorEl={anchorElUser}
+    anchorOrigin={{
+      vertical: "top",
+      horizontal: "right",
+    }}
+    keepMounted
+    transformOrigin={{
+      vertical: "top",
+      horizontal: "right",
+    }}
+    open={Boolean(anchorElUser)}
+    onClose={handleCloseUserMenu}
+  >
+    {settings.map((setting) => (
+      <MenuItem key={setting} onClick={handleCloseUserMenu}>
+        <Typography textAlign="center">{setting}</Typography>
+      </MenuItem>
+    ))}
+  </Menu>
+</Box>; */
+}
+
+//  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+//  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+//    null
+//  );
+
+//  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+//    setAnchorElNav(event.currentTarget);
+//  };
+//  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+//    setAnchorElUser(event.currentTarget);
+//  };
+
+//  const handleCloseNavMenu = () => {
+//    setAnchorElNav(null);
+//  };
+
+//  const handleCloseUserMenu = () => {
+//    setAnchorElUser(null);
+//  };
