@@ -28,7 +28,7 @@ const SearchForm = () => {
           FIND YOUR RIGHT VEHICLE
         </div>
 
-        <Stack spacing={4} sx={{ width: 270 }}>
+        <Stack spacing={3} sx={{ width: 270 }}>
           <Autocomplete
             id="size-small-standard"
             size="small"
@@ -39,7 +39,7 @@ const SearchForm = () => {
               <TextField
                 {...params}
                 variant="standard"
-                // label="Select Vehicle"
+                label="Select Vehicle"
                 placeholder="Select Vehicle"
               />
             )}
@@ -54,7 +54,7 @@ const SearchForm = () => {
               <TextField
                 {...params}
                 variant="standard"
-                // label="Select Brand"
+                label="Select Brand"
                 placeholder="Select Brand"
               />
             )}
@@ -69,7 +69,7 @@ const SearchForm = () => {
               <TextField
                 {...params}
                 variant="standard"
-                // label="Select Max Price"
+                label="Select Max Price"
                 placeholder="Select Max Price"
               />
             )}
@@ -84,7 +84,7 @@ const SearchForm = () => {
               <TextField
                 {...params}
                 variant="standard"
-                // label="Select Min Year"
+                label="Select Min Year"
                 placeholder="Select Min Year"
               />
             )}
@@ -99,7 +99,7 @@ const SearchForm = () => {
               <TextField
                 {...params}
                 variant="standard"
-                // label="Select Max Mileage"
+                label="Select Max Mileage"
                 placeholder="Select Max Mileage"
               />
             )}

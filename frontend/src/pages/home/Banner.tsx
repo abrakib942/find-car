@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { CSSProperties, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import side1 from "../../images/slide-img1.jpg";
@@ -21,6 +21,11 @@ const Banner: React.FC = () => {
   return (
     <div className="p-0">
       <Swiper
+        style={
+          {
+            "--swiper-navigation-color": "#fff",
+          } as CSSProperties
+        }
         spaceBetween={30}
         effect={"fade"}
         navigation={true}
