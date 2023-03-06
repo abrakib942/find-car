@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Mercedes-Benz M-Class",
+    "image": "https://i.ibb.co/NtjSNQz/mb-m-class.jpg",
+    "price": 95000,
+    "condition": "used",
+    "mileage": "85,000 miles",
+    "transmission": "Automatic",
+    "Year": 2015,
+    "engine": "V6 3,0 1",
+    "fuel": "Diesel",
+    "color": "White",
+    "doors": 5
+  },
+  {
+    "name": "Mercedes-Benz GLE-Class",
+    "image": "https://i.ibb.co/pLzRD0w/mb-gle-class.jpg",
+    "price": 80900,
+    "condition": "used",
+    "mileage": "60,000 miles",
+    "transmission": "Automatic",
+    "Year": 2016,
+    "engine": "V8 4,7 l",
+    "fuel": "Premium",
+    "color": "Red",
+    "doors": 5
+  },
+  {
+    "name": "Mercedes-Benz GL-Class",
+    "image": "https://i.ibb.co/WV4xpZd/mb-gl-class.jpg",
+    "price": 110500,
+    "condition": "used",
+    "mileage": "72,500 miles",
+    "transmission": "Automatic",
+    "Year": 2013,
+    "engine": "V6 3,0 l",
+    "fuel": "Diesel",
+    "color": "Blue",
+    "doors": 5
+  },
+  {
+    "name": "Mazda Mazda3",
+    "image": "https://i.ibb.co/hy6PNdf/mazda3.jpg",
+    "price": 17000,
+    "condition": "new",
+    "mileage": "150,000 miles",
+    "transmission": "Manual",
+    "Year": 2009,
+    "engine": "I-4 2,3 l",
+    "fuel": "Regular",
+    "color": "Black",
+    "doors": 5
+  },
+  {
+    "name": "Hyundai Elantra",
+    "image": "https://i.ibb.co/qF6DFJN/huandai-elantra.jpg",
+    "price": 25600,
+    "condition": "used",
+    "mileage": "90,000 miles",
+    "transmission": "Manual",
+    "Year": 2015,
+    "engine": "I-4 1,8 l",
+    "fuel": "Regular",
+    "color": "Red",
+    "doors": 5
+  }
+]

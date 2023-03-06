@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import BrowseByType from "./BrowseByType";
 import PartsBanner from "./PartsBanner";
+import WeekDeals from "./WeekDeals";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Banner />
       <BrowseByType />
       <PartsBanner />
+      <WeekDeals />
     </div>
   );
 };
