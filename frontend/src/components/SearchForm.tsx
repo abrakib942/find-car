@@ -1,10 +1,16 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Select from "react-select";
+import {
+  brandOptions,
+  maxMileage,
+  maxPriceOptions,
+  minimumYearOptions,
+  vehicleOptions,
+} from "../utils/selectOption";
+import { Autocomplete, Stack, TextField } from "@mui/material";
 const bull = (
   <Box
     component="span"
@@ -14,84 +20,92 @@ const bull = (
   </Box>
 );
 
-export const options = [
-  {
-    label: "Bike",
-    value: "bike",
-  },
-  {
-    label: "Car",
-    value: "car",
-  },
-  {
-    label: "Bicycle",
-    value: "bicycle",
-  },
-  {
-    label: "Gardens",
-    value: "gardens",
-  },
-];
-
 const SearchForm = () => {
   return (
     <Card sx={{ minWidth: 320 }}>
       <CardContent className="p-7 flex flex-col gap-5">
-        <Select
-          //   defaultValue={{label: 'all', value: 'all'}}
-          onChange={(value) => {
-            console.log(value);
-          }}
-          options={options}
-          className="basic-multi-select w-full"
-          classNamePrefix="select"
-          //   sx={{ m: 1, minWidth: 120 }}
-          //   size="small"
-        />
-        <Select
-          //   defaultValue={{label: 'all', value: 'all'}}
-          onChange={(value) => {
-            console.log(value);
-          }}
-          options={options}
-          className="basic-multi-select w-full"
-          classNamePrefix="select"
-          //   sx={{ m: 1, minWidth: 120 }}
-          //   size="small"
-        />
-        <Select
-          //   defaultValue={{label: 'all', value: 'all'}}
-          onChange={(value) => {
-            console.log(value);
-          }}
-          options={options}
-          className="basic-multi-select w-full"
-          classNamePrefix="select"
-          //   sx={{ m: 1, minWidth: 120 }}
-          //   size="small"
-        />
-        <Select
-          //   defaultValue={{label: 'all', value: 'all'}}
-          onChange={(value) => {
-            console.log(value);
-          }}
-          options={options}
-          className="basic-multi-select w-full"
-          classNamePrefix="select"
-          //   sx={{ m: 1, minWidth: 120 }}
-          //   size="small"
-        />
-        <Select
-          //   defaultValue={{label: 'all', value: 'all'}}
-          onChange={(value) => {
-            console.log(value);
-          }}
-          options={options}
-          className="basic-multi-select w-full"
-          classNamePrefix="select"
-          //   sx={{ m: 1, minWidth: 120 }}
-          //   size="small"
-        />
+        <div className="font-semibold text-lg font-sans">
+          FIND YOUR RIGHT VEHICLE
+        </div>
+
+        <Stack spacing={4} sx={{ width: 270 }}>
+          <Autocomplete
+            id="size-small-standard"
+            size="small"
+            options={vehicleOptions}
+            getOptionLabel={(option) => option.label}
+            // defaultValue={vehicleOptions[]}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                // label="Select Vehicle"
+                placeholder="Select Vehicle"
+              />
+            )}
+          />
+          <Autocomplete
+            id="size-small-standard"
+            size="small"
+            options={brandOptions}
+            getOptionLabel={(option) => option.label}
+            // defaultValue={vehicleOptions[]}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                // label="Select Brand"
+                placeholder="Select Brand"
+              />
+            )}
+          />
+          <Autocomplete
+            id="size-small-standard"
+            size="small"
+            options={maxPriceOptions}
+            getOptionLabel={(option) => option.label}
+            // defaultValue={vehicleOptions[]}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                // label="Select Max Price"
+                placeholder="Select Max Price"
+              />
+            )}
+          />
+          <Autocomplete
+            id="size-small-standard"
+            size="small"
+            options={minimumYearOptions}
+            getOptionLabel={(option) => option.label}
+            // defaultValue={vehicleOptions[]}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                // label="Select Min Year"
+                placeholder="Select Min Year"
+              />
+            )}
+          />
+          <Autocomplete
+            id="size-small-standard"
+            size="small"
+            options={maxMileage}
+            getOptionLabel={(option) => option.label}
+            // defaultValue={vehicleOptions[]}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                variant="standard"
+                // label="Select Max Mileage"
+                placeholder="Select Max Mileage"
+              />
+            )}
+          />
+        </Stack>
+
         <Button
           //   onClick={() => navigate("/")}
           variant="contained"
