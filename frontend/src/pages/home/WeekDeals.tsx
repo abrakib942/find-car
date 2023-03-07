@@ -18,6 +18,7 @@ import { Pagination } from "swiper";
 
 import { Badge, Button, Divider, Typography } from "@mui/material";
 import { useState } from "react";
+import SingleWDCard from "../../components/SingleWDCard";
 
 const WeekDeals = () => {
   const dealsData = [
@@ -28,7 +29,7 @@ const WeekDeals = () => {
       condition: "used",
       mileage: 85000,
       transmission: "Automatic",
-      Year: 2015,
+      year: 2015,
       engine: "V6 3,0 1",
       fuel: "Diesel",
       color: "White",
@@ -41,7 +42,7 @@ const WeekDeals = () => {
       condition: "used",
       mileage: 60000,
       transmission: "Automatic",
-      Year: 2016,
+      year: 2016,
       engine: "V8 4,7 l",
       fuel: "Premium",
       color: "Red",
@@ -54,7 +55,7 @@ const WeekDeals = () => {
       condition: "used",
       mileage: 72500,
       transmission: "Automatic",
-      Year: 2013,
+      year: 2013,
       engine: "V6 3,0 l",
       fuel: "Diesel",
       color: "Blue",
@@ -67,7 +68,7 @@ const WeekDeals = () => {
       condition: "new",
       mileage: 150000,
       transmission: "Manual",
-      Year: 2009,
+      year: 2009,
       engine: "I-4 2,3 l",
       fuel: "Regular",
       color: "Black",
@@ -80,7 +81,7 @@ const WeekDeals = () => {
       condition: "used",
       mileage: 90000,
       transmission: "Manual",
-      Year: 2015,
+      year: 2015,
       engine: "I-4 1,8 l",
       fuel: "Regular",
       color: "Red",
@@ -88,38 +89,38 @@ const WeekDeals = () => {
     },
   ];
 
-  const [hover, setHover] = useState(false);
-
   return (
-    <div className="my-12 lg:mx-12 bg-white">
-      <Typography
-        style={{
-          borderTop: " 60px solid rgb(251,225,34)",
-          borderRight: "40px solid transparent",
-          width: "320px",
-
-          position: "relative",
-        }}
-        className=" text-black font-semibold italic text-[18px]  font-sans"
-        variant="h6"
-        component="div"
-        sx={{
-          flexGrow: 1,
-          display: { xs: "block", sm: "block", md: "block" },
-        }}
-      >
-        <span
+    <div className="my-12 lg:mx-12 bg-white ">
+      <div className="bg-[#23292E]">
+        <Typography
           style={{
-            position: "absolute",
-            bottom: "10%",
-            left: "5%",
+            borderTop: " 60px solid rgb(251,225,34)",
+            borderRight: "40px solid transparent",
+            width: "320px",
 
-            transform: "translate(5%, -50%)",
+            position: "relative",
+          }}
+          className=" text-black font-semibold italic text-[18px]  font-sans"
+          variant="h6"
+          component="div"
+          sx={{
+            flexGrow: 1,
+            display: { xs: "block", sm: "block", md: "block" },
           }}
         >
-          DEALS OF THE WEEK
-        </span>
-      </Typography>
+          <span
+            style={{
+              position: "absolute",
+              bottom: "10%",
+              left: "5%",
+
+              transform: "translate(5%, -50%)",
+            }}
+          >
+            DEALS OF THE WEEK
+          </span>
+        </Typography>
+      </div>
       <Divider />
       <Swiper
         slidesPerView={2}
@@ -140,74 +141,11 @@ const WeekDeals = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {dealsData.map((item, i) => {
-          return (
-            <div>
-              <SwiperSlide
-                className="py-5 px-2 shadow-sm shadow-gray-300"
-                key={i}
-              >
-                <div
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                  className="text-center relative"
-                >
-                  <img src={item.image} alt="" />
-                  <h4 className="mt-5 font-sans text-lg font-semibold">
-                    {item.name}
-                  </h4>
-                  <div className=" border-b-4 h border-[#ED6663] w-8 mx-auto mt-3"></div>
-                  <h3 className="my-5 font-sans text-xl font-semibold">
-                    ${item.price.toLocaleString()}
-                  </h3>
-                  <Divider />
-                  <div className="flex items-center justify-center gap-14 mt-5 mb-2 text-[13px]  text-gray-400">
-                    <div className="flex flex-col gap-2 items-center">
-                      <Speed className="w-5" />
-                      <h5>{item.mileage.toLocaleString()}</h5>
-                    </div>
-                    <div className="flex flex-col gap-2  items-center">
-                      <SettingsRounded className="w-5" />
-                      <h5>{item.transmission}</h5>
-                    </div>
-                    <div className="flex flex-col gap-2  items-center">
-                      <CalendarMonth className="w-5" />
-                      <h5>{item.Year}</h5>
-                    </div>
-                  </div>
-                </div>
-
-                {hover && (
-                  <div className="absolute top-24 left-28 flex flex-row gap-5">
-                    <FavoriteBorder
-                      style={{
-                        width: "80px",
-                        height: "60px",
-                        transform: "skew(150deg)",
-                        background: "white",
-                      }}
-                    />
-                    <VisibilityOutlined />
-                    <ShoppingCartOutlined />
-                  </div>
-                )}
-                <Badge
-                  className="absolute top-10 left-10"
-                  badgeContent={item.condition.toUpperCase()}
-                  sx={{
-                    "& .MuiBadge-badge": {
-                      color: "white",
-                      backgroundColor: "#ED6663",
-                      borderRadius: "10%",
-                      padding: "10px",
-                      fontSize: "11px",
-                    },
-                  }}
-                />
-              </SwiperSlide>
-            </div>
-          );
-        })}
+        {dealsData.map((item, i) => (
+          <SwiperSlide className="py-5 px-2 shadow-sm shadow-gray-300">
+            <SingleWDCard item={item} key={i} />
+          </SwiperSlide>
+        ))}
         <Divider />
       </Swiper>
     </div>
