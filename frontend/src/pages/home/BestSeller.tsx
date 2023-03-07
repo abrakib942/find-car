@@ -11,87 +11,87 @@ import { Pagination } from "swiper";
 import { Divider, Typography } from "@mui/material";
 import SingleWDCard from "../../components/SingleItemCard";
 
-const WeekDeals = () => {
-  const dealsData = [
+const BestSeller = () => {
+  const bestSellData = [
     {
-      name: "Mercedes-Benz M-Class",
-      image: "https://i.ibb.co/NtjSNQz/mb-m-class.jpg",
-      price: 95000,
-      condition: "used",
+      name: "Acura Elite Specifications",
+      image: "https://i.ibb.co/rdyY9PZ/acura-elit.jpg",
+      price: 49500,
+      condition: "New",
       mileage: 85000,
       transmission: "Automatic",
-      year: 2015,
+      year: 2014,
+      engine: "I-4 1,5 l",
+      fuel: "Regular",
+      color: "Blue",
+      doors: 5,
+    },
+    {
+      name: "Chevrolet Volt",
+      image: "https://i.ibb.co/47GCZW9/chevron-volt.jpg",
+      price: 43500,
+      condition: "New",
+      mileage: 15000,
+      transmission: "Automatic",
+      year: 2017,
       engine: "V6 3,0 1",
       fuel: "Diesel",
       color: "White",
       doors: 5,
     },
     {
-      name: "Mercedes-Benz GLE-Class",
-      image: "https://i.ibb.co/pLzRD0w/mb-gle-class.jpg",
-      price: 80900,
-      condition: "used",
-      mileage: 60000,
+      name: "2016 Toyota Higlander Limited",
+      image: "https://i.ibb.co/x3mvp2L/toyota-hl.jpg",
+      price: 35000,
+      condition: "Used",
+      mileage: 22500,
       transmission: "Automatic",
-      year: 2016,
-      engine: "V8 4,7 l",
-      fuel: "Premium",
-      color: "Red",
-      doors: 5,
-    },
-    {
-      name: "Mercedes-Benz GL-Class",
-      image: "https://i.ibb.co/WV4xpZd/mb-gl-class.jpg",
-      price: 110500,
-      condition: "used",
-      mileage: 72500,
-      transmission: "Automatic",
-      year: 2013,
-      engine: "V6 3,0 l",
-      fuel: "Diesel",
-      color: "Blue",
-      doors: 5,
-    },
-    {
-      name: "Mazda Mazda3",
-      image: "https://i.ibb.co/hy6PNdf/mazda3.jpg",
-      price: 17000,
-      condition: "new",
-      mileage: 150000,
-      transmission: "Manual",
-      year: 2009,
-      engine: "I-4 2,3 l",
-      fuel: "Regular",
-      color: "Black",
-      doors: 5,
-    },
-    {
-      name: "Hyundai Elantra",
-      image: "https://i.ibb.co/qF6DFJN/huandai-elantra.jpg",
-      price: 25600,
-      condition: "used",
-      mileage: 90000,
-      transmission: "Manual",
       year: 2015,
-      engine: "I-4 1,8 l",
-      fuel: "Regular",
-      color: "Red",
+      engine: "3.5L V6 DOHC 24V",
+      fuel: "Gasoline",
+      color: "Biscuit",
+      doors: 5,
+    },
+    {
+      name: "BMW 550i",
+      image: "https://i.ibb.co/gmhvBkP/bmw-550i.jpg",
+      price: 60000,
+      condition: "Used",
+      mileage: 90000,
+      transmission: "Automatic",
+      year: 2011,
+      engine: "V8 4,4 l",
+      fuel: "Premium",
+      color: "Silver Gray",
+      doors: 5,
+    },
+    {
+      name: "Audi Q5",
+      image: "https://i.ibb.co/h8JSysN/audi-q5.jpg",
+      price: 65000,
+      condition: "Nsed",
+      mileage: 40000,
+      transmission: "Automatic",
+      year: 2017,
+      engine: "I-4 2,0 l",
+      fuel: "Premium",
+      color: "Black",
       doors: 5,
     },
   ];
 
   return (
     <div className="my-12 lg:mx-12 bg-white ">
-      <div className="bg-[#23292E]">
+      <div>
         <Typography
           style={{
-            borderTop: " 60px solid rgb(251,225,34)",
+            borderTop: " 60px solid rgb(80,178,252)",
             borderRight: "40px solid transparent",
             width: "320px",
 
             position: "relative",
           }}
-          className=" text-black font-semibold italic text-[18px]  font-sans"
+          className=" text-white font-semibold italic text-[18px]  font-sans"
           variant="h6"
           component="div"
           sx={{
@@ -108,7 +108,7 @@ const WeekDeals = () => {
               transform: "translate(5%, -50%)",
             }}
           >
-            DEALS OF THE WEEK
+            BEST SELLER VEHICLES
           </span>
         </Typography>
       </div>
@@ -129,7 +129,7 @@ const WeekDeals = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {dealsData.map((item, i) => (
+        {bestSellData.map((item, i) => (
           <SwiperSlide className="py-5 px-2 shadow-sm shadow-gray-300">
             <SingleWDCard item={item} key={i} />
           </SwiperSlide>
@@ -140,4 +140,4 @@ const WeekDeals = () => {
   );
 };
 
-export default WeekDeals;
+export default BestSeller;

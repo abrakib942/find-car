@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
+import BestSeller from "./BestSeller";
 import BrowseByType from "./BrowseByType";
 import PartsBanner from "./PartsBanner";
 import WeekDeals from "./WeekDeals";
@@ -11,6 +12,7 @@ const Home = () => {
       <BrowseByType />
       <PartsBanner />
       <WeekDeals />
+      <BestSeller />
     </div>
   );
 };

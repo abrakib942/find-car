@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Acura Elite Specifications",
+    "image": "https://i.ibb.co/rdyY9PZ/acura-elit.jpg",
+    "price": 49500,
+    "condition": "New",
+    "mileage": 85000,
+    "transmission": "Automatic",
+    "year": 2014,
+    "engine": "I-4 1,5 l",
+    "fuel": "Regular",
+    "color": "Blue",
+    "doors": 5
+  },
+  {
+    "name": "Chevrolet Volt",
+    "image": "https://i.ibb.co/47GCZW9/chevron-volt.jpg",
+    "price": 43500,
+    "condition": "New",
+    "mileage": 15000,
+    "transmission": "Automatic",
+    "year": 2017,
+    "engine": "V6 3,0 1",
+    "fuel": "Diesel",
+    "color": "White",
+    "doors": 5
+  },
+  {
+    "name": "2016 Toyota Higlander Limited",
+    "image": "https://i.ibb.co/x3mvp2L/toyota-hl.jpg",
+    "price": 35000,
+    "condition": "Used",
+    "mileage": 22500,
+    "transmission": "Automatic",
+    "year": 2015,
+    "engine": "3.5L V6 DOHC 24V",
+    "fuel": "Gasoline",
+    "color": "Biscuit",
+    "doors": 5
+  },
+  {
+    "name": "BMW 550i",
+    "image": "https://i.ibb.co/gmhvBkP/bmw-550i.jpg",
+    "price": 60000,
+    "condition": "Used",
+    "mileage": 90000,
+    "transmission": "Automatic",
+    "year": 2011,
+    "engine": "V8 4,4 l",
+    "fuel": "Premium",
+    "color": "Silver Gray",
+    "doors": 5
+  },
+  {
+    "name": "Audi Q5",
+    "image": "https://i.ibb.co/h8JSysN/audi-q5.jpg",
+    "price": 65000,
+    "condition": "Nsed",
+    "mileage": 40000,
+    "transmission": "Automatic",
+    "year": 2017,
+    "engine": "I-4 2,0 l",
+    "fuel": "Premium",
+    "color": "Black",
+    "doors": 5
+  }
+]

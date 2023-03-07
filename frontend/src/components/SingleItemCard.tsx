@@ -71,7 +71,7 @@ const SingleWDCard = (props: CardData) => {
       </div>
 
       {hover && (
-        <div className="absolute top-20 left-16 flex items-center justify-center flex-row gap-2">
+        <div className="absolute top-20 left-[75px] flex items-center justify-center flex-row gap-2">
           <Tooltip title="Add to Wishlist">
             <IconButton
               className=" bg-white text-black hover:bg-[#424242] hover:text-white transform hover:scale-110 duration-500 border-solid border-2 border-gray-400"
