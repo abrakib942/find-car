@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 import { Divider, Typography } from "@mui/material";
-import SingleWDCard from "../../components/SingleItemCard";
+import SingleWDCard from "../../../components/SingleItemCard";
 
 const WeekDeals = () => {
   const dealsData = [

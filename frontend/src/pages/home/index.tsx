@@ -1,10 +1,12 @@
 import React from "react";
-import Banner from "./Banner";
-import BestSeller from "./BestSeller";
-import BrowseByType from "./BrowseByType";
-import PartsBanner from "./PartsBanner";
-import Testimonial from "./Testimonial";
-import WeekDeals from "./WeekDeals";
+import Banner from "./components/Banner";
+import BestSeller from "./components/BestSeller";
+import BrowseByType from "./components/BrowseByType";
+import Newsletter from "./components/Newsletter";
+import PartsBanner from "./components/PartsBanner";
+import PopularBrand from "./components/PopularBrand";
+import Testimonial from "./components/Testimonial";
+import WeekDeals from "./components/WeekDeals";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <WeekDeals />
       <BestSeller />
       <Testimonial />
+      <PopularBrand />
+      <Newsletter />
     </div>
   );
 };

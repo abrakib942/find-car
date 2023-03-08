@@ -1,10 +1,10 @@
 import React, { CSSProperties } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import testimonialBg from "../../images/others/testimonial-bg.jpg";
-import people1 from "../../images/others/people1.png";
-import people2 from "../../images/others/people2.png";
-import people3 from "../../images/others/people3.png";
+import testimonialBg from "../../../images/others/testimonial-bg.jpg";
+import people1 from "../../../images/others/people1.png";
+import people2 from "../../../images/others/people2.png";
+import people3 from "../../../images/others/people3.png";
 
 // Import Swiper styles
 import "swiper/css";

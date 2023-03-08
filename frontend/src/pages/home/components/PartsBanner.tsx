@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import speakers from "../../images/speakers.png";
-import schedule from "../../images/schedule.png";
+import speakers from "../../../images/speakers.png";
+import schedule from "../../../images/schedule.png";
 
 // Import Swiper styles
 import "swiper/css";

@@ -1,8 +1,8 @@
-import React, { CSSProperties, useRef, useState } from "react";
+import React, { CSSProperties } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import side1 from "../../images/slide-img1.jpg";
-import side2 from "../../images/slide-img2.jpg";
+import side1 from "../../../images/slide-img1.jpg";
+import side2 from "../../../images/slide-img2.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 import { EffectFade, Autoplay, Navigation, Pagination } from "swiper";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import SearchForm from "../../components/SearchForm";
+import SearchForm from "../../../components/SearchForm";
 
 const Banner: React.FC = () => {
   const navigate = useNavigate();
