@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./components/Banner";
 import BestSeller from "./components/BestSeller";
 import BrowseByType from "./components/BrowseByType";
+import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import PartsBanner from "./components/PartsBanner";
 import PopularBrand from "./components/PopularBrand";
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonial />
       <PopularBrand />
       <Newsletter />
+      <Footer />
     </div>
   );
 };
