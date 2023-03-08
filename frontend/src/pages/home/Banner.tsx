@@ -29,13 +29,6 @@ const Banner: React.FC = () => {
         spaceBetween={30}
         effect={"fade"}
         navigation={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // autoplay={{
-        //   delay: 10000,
-        //   disableOnInteraction: true,
-        // }}
         modules={[EffectFade, Autoplay, Navigation, Pagination]}
         className="mySwiper"
       >

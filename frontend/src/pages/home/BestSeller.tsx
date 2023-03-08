@@ -69,7 +69,7 @@ const BestSeller = () => {
       name: "Audi Q5",
       image: "https://i.ibb.co/h8JSysN/audi-q5.jpg",
       price: 65000,
-      condition: "Nsed",
+      condition: "Used",
       mileage: 40000,
       transmission: "Automatic",
       year: 2017,

@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import BestSeller from "./BestSeller";
 import BrowseByType from "./BrowseByType";
 import PartsBanner from "./PartsBanner";
+import Testimonial from "./Testimonial";
 import WeekDeals from "./WeekDeals";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <PartsBanner />
       <WeekDeals />
       <BestSeller />
+      <Testimonial />
     </div>
   );
 };
