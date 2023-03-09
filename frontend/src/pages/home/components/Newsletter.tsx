@@ -27,10 +27,9 @@ const Newsletter = () => {
           GET NOTIFIED OF ANY UPDATES!
         </div>
       </div>
-      <div className="flex items-center justify-center gap-1">
+      <div className="lg:flex md:flex items-center justify-center gap-1">
         <TextField
-          sx={{ style, width: 500 }}
-          className=" bg-white"
+          className="lg:w-[450px] w-[270px] bg-white rounded-lg"
           placeholder="Your Email address"
           autoFocus
           type="email"
@@ -39,7 +38,7 @@ const Newsletter = () => {
         />
         <Button
           variant="contained"
-          className="px-8 py-4 bg-[#FBE122] text-black hover:bg-[#424242] hover:text-white"
+          className="px-8 py-4 font-semibold bg-[#FBE122] text-black hover:bg-[#424242] hover:text-white"
           type="submit"
         >
           Subscribe

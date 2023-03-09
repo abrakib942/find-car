@@ -44,7 +44,7 @@ const SingleWDCard = (props: CardData) => {
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="text-center relative hover:text-[#ED6663]">
         <img
-          className="transform hover:scale-125 duration-500 mx-auto"
+          className="transform hover:scale-110 duration-500 mx-auto"
           src={image}
           alt=""
         />

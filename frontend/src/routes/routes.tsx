@@ -4,6 +4,7 @@ import Main from "../layout/main/Main";
 import Home from "../pages/home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Vehicles from "../pages/vehicles/Vehicles";
 
 const routes = createBrowserRouter([
   {
@@ -15,16 +16,20 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "*",
+        element: <NotFound />,
+      },
+      {
+        path: "/vehicles",
+        element: <Vehicles />,
+      },
+      {
         path: "/login",
         element: <Login />,
       },
       {
         path: "/register",
         element: <Register />,
-      },
-      {
-        path: "*",
-        element: <NotFound />,
       },
     ],
   },
