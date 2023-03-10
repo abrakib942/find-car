@@ -252,9 +252,9 @@ const Vehicles = () => {
                 <div>
                   <div className="flex py-4 gap-2 bg-white">
                     <div>
-                      <img className="w-40 " src={item.image} alt="" />
+                      <img className="w-[90px] " src={item.image} alt="" />
                     </div>
-                    <div className="flex flex-col gap-1 text-[#747774] px-3 text-sm">
+                    <div className="flex flex-col gap-1 text-gray-600 px-3 text-sm">
                       <div>{item.name}</div>
                       <div className="text-xs">
                         <DirectionsCarFilledTwoTone className="w-4" />{" "}
