@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import { Divider, Typography } from "@mui/material";
 import { CSSProperties } from "react";
+import Marquee from "react-fast-marquee";
 
 const PopularBrand = () => {
   const brands = [
@@ -57,52 +58,23 @@ const PopularBrand = () => {
           POPULAR BRANDS
         </span>
       </Typography>
+
       <Divider />
-      <Swiper
-        // style={
-        //   {
-        //     "--swiper-pagination-color": "black",
-        //     "--swiper-pagination-bullet-inactive-color": "#999999",
-        //   } as CSSProperties
-        // }
-        slidesPerView={2}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        breakpoints={{
-          640: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 4,
-          },
-          1024: {
-            slidesPerView: 8,
-          },
-        }}
-        autoplay={{
-          delay: 1200,
-          disableOnInteraction: true,
-          reverseDirection: false,
-        }}
-        modules={[Pagination, Autoplay]}
-        className="mySwiper"
-      >
+
+      <Marquee speed={60} gradient={false}>
         {brands.map((item, i) => {
           return (
-            <div>
-              <SwiperSlide
-                className="flex flex-col items-center gap-6 py-6 px-2 shadow-sm shadow-gray-300"
-                key={i}
-              >
-                <img src={item?.logo} alt="" />
-                {/* <h4 className="font-mono">{item?.name.toUpperCase()}</h4> */}
-              </SwiperSlide>
+            <div
+              className="grid items-center p-2 shadow-sm shadow-gray-300"
+              key={i}
+            >
+              <img className="w-36" src={item?.logo} alt="" />
+              {/* <h4 className="font-mono">{item?.name.toUpperCase()}</h4> */}
             </div>
           );
         })}
-        <Divider />
-      </Swiper>
+      </Marquee>
+      <Divider />
     </div>
   );
 };

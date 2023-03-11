@@ -141,7 +141,7 @@ const Navbar = (props: Props) => {
                 key={item.label}
               >
                 <Button
-                  className="text-black font-sans font-bold mb-2"
+                  className="text-black font-sans text-[15px] mb-2"
                   variant="text"
                   color="inherit"
                 >
