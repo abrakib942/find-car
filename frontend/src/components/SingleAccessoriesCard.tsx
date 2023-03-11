@@ -1,14 +1,10 @@
 import {
-  CalendarMonth,
   FavoriteBorder,
-  SettingsRounded,
   ShoppingCartOutlined,
-  Speed,
   VisibilityOutlined,
 } from "@mui/icons-material";
 import { Badge, Divider, IconButton, Tooltip } from "@mui/material";
 import React, { useState } from "react";
-import { SwiperSlide } from "swiper/react";
 
 interface CardData {
   item: {
@@ -22,7 +18,7 @@ interface CardData {
 }
 
 const SingleAccessoriesCard = (props: CardData) => {
-  const { name, image, price, discount, rating, description } = props.item;
+  const { name, image, price, discount, rating } = props.item;
 
   const [hover, setHover] = useState(false);
 

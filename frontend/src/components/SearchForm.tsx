@@ -1,8 +1,7 @@
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Select from "react-select";
+
 import {
   brandOptions,
   maxMileage,
@@ -11,14 +10,14 @@ import {
   vehicleOptions,
 } from "../utils/selectOption";
 import { Autocomplete, Stack, TextField } from "@mui/material";
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
+// const bull = (
+//   <Box
+//     component="span"
+//     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+//   >
+//     •
+//   </Box>
+// );
 
 const SearchForm = () => {
   return (
