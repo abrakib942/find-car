@@ -16,12 +16,14 @@ mongoose.connect(process.env.DB_CONNECT).then(() => {
 
 // routes
 const userRoute = require("./routes/userRoute");
+const vehicleRoute = require("./routes/vehicleRoute");
 
 app.get("/", (req, res) => {
   res.send("Server is On");
 });
 
 app.use("/api/user", userRoute);
+app.use("/api/vehicle", vehicleRoute);
 
 //
 
