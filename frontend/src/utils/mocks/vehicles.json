@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Acura Elite Specifications",
+    "image": "https://i.ibb.co/rdyY9PZ/acura-elit.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Acura"
+    },
+    "type": "Sedan",
+    "model": "RDX",
+    "price": 49500,
+    "condition": "New",
+    "mileage": 85000,
+    "transmission": "Automatic",
+    "year": 2014,
+    "engine": "I-4 1,5 l",
+    "fuel": "Regular",
+    "color": "Blue",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Chevrolet Volt",
+    "image": "https://i.ibb.co/47GCZW9/chevron-volt.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Chevrolet"
+    },
+    "type": "Sedan",
+    "model": "Volt",
+    "price": 43500,
+    "condition": "New",
+    "mileage": 15000,
+    "transmission": "Automatic",
+    "year": 2017,
+    "engine": "V6 3,0 1",
+    "fuel": "Diesel",
+    "color": "White",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "2016 Toyota Higlander Limited",
+    "image": "https://i.ibb.co/x3mvp2L/toyota-hl.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Toyota"
+    },
+    "type": "SUV",
+    "model": "Highlander",
+    "price": 35000,
+    "condition": "Used",
+    "mileage": 22500,
+    "transmission": "Automatic",
+    "year": 2015,
+    "engine": "3.5L V6 DOHC 24V",
+    "fuel": "Gasoline",
+    "color": "Biscuit",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "BMW 550i",
+    "image": "https://i.ibb.co/gmhvBkP/bmw-550i.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "BMW"
+    },
+    "type": "Sedan",
+    "model": "5-Series",
+    "price": 60000,
+    "condition": "Used",
+    "mileage": 90000,
+    "transmission": "Automatic",
+    "year": 2011,
+    "engine": "V8 4,4 l",
+    "fuel": "Premium",
+    "color": "Silver Gray",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Kia K900",
+    "image": "https://i.ibb.co/yPJsXk6/p23.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Kia"
+    },
+    "type": "Sedan",
+    "model": "K900",
+    "price": 69000,
+    "condition": "New",
+    "mileage": 30000,
+    "transmission": "Automatic",
+    "year": 2017,
+    "engine": "V8 5,0 l",
+    "fuel": "Premium",
+    "color": "Silver Gray",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Nissan Pathfinder",
+    "image": "https://i.ibb.co/vVRpJtC/p28.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Nissan"
+    },
+    "type": "SUV",
+    "model": "Pathfinder",
+    "price": 35000,
+    "condition": "New",
+    "mileage": 60000,
+    "transmission": "Automatic",
+    "year": 2016,
+    "engine": "V6 3,5 l",
+    "fuel": "Regular",
+    "color": "Silver Gray",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Audi Q5",
+    "image": "https://i.ibb.co/h8JSysN/audi-q5.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Audi"
+    },
+    "type": "SUV",
+    "model": "Q5",
+    "price": 65000,
+    "condition": "Used",
+    "mileage": 40000,
+    "transmission": "Automatic",
+    "year": 2017,
+    "engine": "I-4 2,0 l",
+    "fuel": "Premium",
+    "color": "Black",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Mercedes-Benz M-Class",
+    "image": "https://i.ibb.co/NtjSNQz/mb-m-class.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Mercedes-Benz"
+    },
+    "type": "SUV",
+    "model": "Sprinter",
+    "price": 95000,
+    "condition": "Used",
+    "mileage": 85000,
+    "transmission": "Automatic",
+    "year": 2015,
+    "engine": "V6 3,0 1",
+    "fuel": "Diesel",
+    "color": "White",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Mercedes-Benz GLE-Class",
+    "image": "https://i.ibb.co/pLzRD0w/mb-gle-class.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Mercedes-Benz"
+    },
+    "type": "SUV",
+    "model": "GLE-Class",
+    "price": 80900,
+    "condition": "Used",
+    "mileage": 60000,
+    "transmission": "Automatic",
+    "year": 2016,
+    "engine": "V8 4,7 l",
+    "fuel": "Premium",
+    "color": "Red",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Mercedes-Benz GL-Class",
+    "image": "https://i.ibb.co/WV4xpZd/mb-gl-class.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Mercedes-Benz"
+    },
+    "type": "SUV",
+    "model": "GL-Class",
+    "price": 110500,
+    "condition": "Used",
+    "mileage": 72500,
+    "transmission": "Automatic",
+    "year": 2013,
+    "engine": "V6 3,0 l",
+    "fuel": "Diesel",
+    "color": "Blue",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Mazda Mazda3",
+    "image": "https://i.ibb.co/hy6PNdf/mazda3.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Mazda"
+    },
+    "type": "Hatchback",
+    "model": "Mazda3",
+    "price": 17000,
+    "condition": "New",
+    "mileage": 150000,
+    "transmission": "Manual",
+    "year": 2009,
+    "engine": "I-4 2,3 l",
+    "fuel": "Regular",
+    "color": "Black",
+    "doors": 5,
+    "status": "in-stock"
+  },
+  {
+    "name": "Hyundai Elantra",
+    "image": "https://i.ibb.co/qF6DFJN/huandai-elantra.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "brand": {
+      "name": "Hyundai"
+    },
+    "type": "Sedan",
+    "model": "Elantra",
+    "price": 25600,
+    "condition": "Used",
+    "mileage": 90000,
+    "transmission": "Manual",
+    "year": 2015,
+    "engine": "I-4 1,8 l",
+    "fuel": "Regular",
+    "color": "Red",
+    "doors": 5,
+    "status": "in-stock"
+  }
+]
