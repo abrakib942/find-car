@@ -17,6 +17,7 @@ mongoose.connect(process.env.DB_CONNECT).then(() => {
 // routes
 const userRoute = require("./routes/userRoute");
 const vehicleRoute = require("./routes/vehicleRoute");
+const accessoriesRoute = require("./routes/accessoriesRoute");
 
 app.get("/", (req, res) => {
   res.send("Server is On");
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", userRoute);
 app.use("/api/vehicle", vehicleRoute);
+app.use("/api/accessories", accessoriesRoute);
 
 //
 
