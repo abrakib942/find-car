@@ -37,13 +37,8 @@ const accessoriesSchema = mongoose.Schema(
     brand: {
       name: {
         type: String,
-        required: true,
+        // required: true,
       },
-      //   brand_id: {
-      //     type: ObjectId,
-      //     ref: "Brand",
-      //     required: true,
-      //   },
     },
 
     category: {

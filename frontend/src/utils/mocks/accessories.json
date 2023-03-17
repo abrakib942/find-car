@@ -2,18 +2,26 @@
   {
     "name": "Gorgeous Mercedes-Benz E-Class All-Terrain Luxury",
     "image": "https://i.ibb.co/tBd7P1Y/p31.jpg",
+    "brand": {
+      "name": "Mercedes-Benz"
+    },
     "price": 310,
     "discount": 12,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Diesel Turbocharger HX35 HX35W Turbo Charger",
     "image": "https://i.ibb.co/vzP3T98/p36.jpg",
+    "brand": {
+      "name": "Unknown"
+    },
     "price": 159,
     "discount": 17,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Best Cell Phone Car TurboCharges Mercedes-Benz",
@@ -21,7 +29,8 @@
     "price": 36,
     "discount": 28,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "STICKERS ETRIER DE FREIN ALFA ROMEO",
@@ -29,7 +38,8 @@
     "price": 25,
     "discount": 50,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Brembo – Cross Drilled 2-Piece Rotor Big Brake Kit",
@@ -37,7 +47,8 @@
     "price": 90,
     "discount": 25,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Black Wheel Cover – 14 inch Matte Black Hubcap",
@@ -45,7 +56,8 @@
     "price": 120,
     "discount": 34,
     "rating": 4,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Car and Truck Throttle Bodies for Mercedes Benz",
@@ -53,7 +65,8 @@
     "price": 65,
     "discount": 19,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Mercedes Benz E W212 C W204 GENUINE Oil Filter",
@@ -61,7 +74,8 @@
     "price": 135,
     "discount": 13,
     "rating": 3,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Car Ford Ranger Ford Motor Company Rim Wheel",
@@ -69,7 +83,8 @@
     "price": 50,
     "discount": 38,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "WRX Custom Gauge Pods & Bezels",
@@ -77,7 +92,8 @@
     "price": 140,
     "discount": 16,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   },
   {
     "name": "Budge B-3 Blue Size 3: Fits 16’8″ Long Car Cover",
@@ -85,6 +101,7 @@
     "price": 90,
     "discount": 40,
     "rating": 5,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.",
+    "status": "in-stock"
   }
 ]
