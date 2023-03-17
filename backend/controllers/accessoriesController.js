@@ -66,7 +66,7 @@ exports.getAccessories = async (req, res) => {
     res.status(200).json({
       status: "success",
       message: "Data got successfully!",
-      data: { totalAccessories, totalPages, accessories },
+      data: accessories,
     });
   } catch (error) {
     res.status(400).json({
