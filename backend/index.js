@@ -10,9 +10,13 @@ app.use(cors());
 
 // database connection
 
-mongoose.connect(process.env.DB_CONNECT).then(() => {
-  console.log(`Database connection is successful`);
-});
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.fcdjjm2.mongodb.net/road-rover`
+  )
+  .then(() => {
+    console.log(`Database connection is successful`);
+  });
 
 // routes
 const userRoute = require("./routes/userRoute");
