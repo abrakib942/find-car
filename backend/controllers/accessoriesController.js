@@ -20,12 +20,53 @@ exports.createAccessory = async (req, res, next) => {
 
 exports.getAccessories = async (req, res) => {
   try {
-    const accessories = await Accessories.find({});
+    let filters = { ...req.query };
+
+    const excludeFields = ["sort", "page", "limit"];
+
+    excludeFields.forEach((field) => delete filters[field]);
+
+    let filterString = JSON.stringify(filters);
+    filterString = filterString.replace(
+      /\b(gt|gte|lt|lte)\b/g,
+      (match) => `$${match}`
+    );
+
+    filters = JSON.parse(filterString);
+
+    let queries = {};
+
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(",").join(" ");
+      queries.sortBy = sortBy;
+      console.log(sortBy);
+    }
+
+    if (req.query.fields) {
+      const fields = req.query.fields.split(",").join(" ");
+      queries.fields = fields;
+    }
+
+    if (req.query.page) {
+      const { page = 1, limit = 10 } = req.query;
+      const skip = (page - 1) * parseInt(limit);
+      queries.skip = skip;
+      queries.limit = parseInt(limit);
+    }
+
+    const accessories = await Accessories.find(filters)
+      .skip(queries.skip)
+      .limit(queries.limit)
+      .select(queries.fields)
+      .sort(queries.sortBy);
+
+    const totalAccessories = await Accessories.countDocuments(filters);
+    const totalPages = Math.ceil(totalAccessories / queries.limit);
 
     res.status(200).json({
       status: "success",
       message: "Data got successfully!",
-      data: accessories,
+      data: { totalAccessories, totalPages, accessories },
     });
   } catch (error) {
     res.status(400).json({

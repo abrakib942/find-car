@@ -66,7 +66,7 @@ exports.getVehicles = async (req, res) => {
     res.status(200).json({
       status: "success",
       message: "Data got successfully!",
-      data: vehicles,
+      data: { totalVehicles, totalPages, vehicles },
     });
   } catch (error) {
     res.status(400).json({
